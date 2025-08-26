@@ -75,6 +75,7 @@ func main() {
 	router.Use(middleware.URLFormat)
 
 	router.Post("/url", save.New(log, storage))
+	// router.Get("/{alias}", redi)
 
 	log.Info("starting server", slog.String("address", cfg.Addres))
 
